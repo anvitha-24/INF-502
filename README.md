@@ -70,12 +70,12 @@ You will be prompted with a menu to choose your options for sequence analysis.
   
 DNA Similarity Program
 
-Set maximum shift
-Input DNA sequences
-Calculate number of matches (No shifts)
-Calculate chain after shifts (Maximum score)
-Calculate maximum contiguous chain
-Exit
+-Set maximum shift
+-Input DNA sequences
+-Calculate number of matches (No shifts)
+-Calculate chain after shifts (Maximum score)
+-Calculate maximum contiguous chain
+-Exit
 Select an option: 1
 Enter the maximum shift value: 3
 
@@ -83,12 +83,12 @@ Enter the maximum shift value: 3
 
 DNA Similarity Program
 
-Set maximum shift
-Input DNA sequences
-Calculate number of matches (No shifts)
-Calculate chain after shifts (Maximum score)
-Calculate maximum contiguous chain
-Exit
+-Set maximum shift
+-Input DNA sequences
+-Calculate number of matches (No shifts)
+-Calculate chain after shifts (Maximum score)
+-Calculate maximum contiguous chain
+-Exit
 Select an option: 2
 Enter the first DNA sequence: ACGTACGT
 Enter the second DNA sequence: TACGTACG
@@ -97,12 +97,12 @@ Enter the second DNA sequence: TACGTACG
 
 DNA Similarity Program
 
-Set maximum shift
-Input DNA sequences
-Calculate number of matches (No shifts)
-Calculate chain after shifts (Maximum score)
-Calculate maximum contiguous chain
-Exit
+-Set maximum shift
+-Input DNA sequences
+-Calculate number of matches (No shifts)
+-Calculate chain after shifts (Maximum score)
+-Calculate maximum contiguous chain
+-Exit
 Select an option: 3
 Number of matches: 8 (No shifts)
 
@@ -110,12 +110,12 @@ Number of matches: 8 (No shifts)
 
 DNA Similarity Program
 
-Set maximum shift
-Input DNA sequences
-Calculate number of matches (No shifts)
-Calculate chain after shifts (Maximum score)
-Calculate maximum contiguous chain
-Exit
+-Set maximum shift
+-Input DNA sequences
+-Calculate number of matches (No shifts)
+-Calculate chain after shifts (Maximum score)
+-Calculate maximum contiguous chain
+-Exit
 Select an option: 4
 Best score after shifting by 4 cells: 8
 
@@ -123,12 +123,12 @@ Best score after shifting by 4 cells: 8
 
 DNA Similarity Program
 
-Set maximum shift
-Input DNA sequences
-Calculate number of matches (No shifts)
-Calculate chain after shifts (Maximum score)
-Calculate maximum contiguous chain
-Exit
+-Set maximum shift
+-Input DNA sequences
+-Calculate number of matches (No shifts)
+-Calculate chain after shifts (Maximum score)
+-Calculate maximum contiguous chain
+-Exit
 Select an option: 5
 Maximum contiguous chain: 4
 
@@ -136,12 +136,12 @@ Maximum contiguous chain: 4
 
 DNA Similarity Program
 
-Set maximum shift
-Input DNA sequences
-Calculate number of matches (No shifts)
-Calculate chain after shifts (Maximum score)
-Calculate maximum contiguous chain
-Exit
+-Set maximum shift
+-Input DNA sequences
+-Calculate number of matches (No shifts)
+-Calculate chain after shifts (Maximum score)
+-Calculate maximum contiguous chain
+-Exit
 Select an option: 6
 Exiting the program.
 
