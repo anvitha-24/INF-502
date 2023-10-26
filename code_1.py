@@ -1,5 +1,3 @@
-import os
-
 # Function to read DNA sequences from a file
 def read_sequences_from_file(filename):
     sequences = []
@@ -11,10 +9,12 @@ def read_sequences_from_file(filename):
         print("File not found.")
     return sequences
 
+
 # Function to calculate the number of matches between two DNA sequences
 def calculate_matches(sequence1, sequence2):
     match_count = sum(char1 == char2 for char1, char2 in zip(sequence1, sequence2))
     return match_count
+
 
 # Function to calculate the maximum contiguous chain between two DNA sequences
 def calculate_max_contiguous_chain(sequence1, sequence2):
@@ -30,10 +30,12 @@ def calculate_max_contiguous_chain(sequence1, sequence2):
 
     return max_contiguous_chain
 
+
 # Function to set the maximum shift based on user input
 def set_max_shift():
     max_shift = int(input("Enter the maximum shift: "))
     return max_shift
+
 
 # Function to calculate the number of matches with shifts iterating through the maximum shift
 def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
@@ -50,6 +52,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
 
     return max_match_count, best_shift
 
+
 # Function to calculate the maximum contiguous chain with shifts iterating through the maximum shift
 def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
     max_contiguous_chain = 0
@@ -64,6 +67,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
             best_shift = shift
 
     return max_contiguous_chain, best_shift
+
 
 # Main menu for user interaction
 def main_menu():
@@ -141,6 +145,7 @@ def main_menu():
             break
         else:
             print("Invalid choice. Please select a valid option.")
+
 
 if __name__ == "__main__":
     main_menu()
