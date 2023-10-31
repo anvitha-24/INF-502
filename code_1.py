@@ -12,7 +12,7 @@ def read_sequences_from_file(filename):
 
 # Function to calculate the number of matches between two DNA sequences
 def calculate_matches(sequence1, sequence2):
-    match_count = sum(char1 == char2 for char1, char2 in zip(sequence1, sequence2))
+    match_count = sum(char1 == char2 and char1 != '-' for char1, char2 in zip(sequence1, sequence2))
     return match_count
 
 
@@ -47,6 +47,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
         tmp_sequence1 = ("-" * shift) + sequence1
         tmp_sequence2 = sequence2 + ("-" * shift)
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
+        tmp_sequence1 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
         print("-------------------------", shift)
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
@@ -61,6 +62,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
         tmp_sequence2 = ("-" * shift) + sequence2
         tmp_sequence1 = sequence1 + ("-" * shift)
         tmp_sequence1 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
+        tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
         print("-------------------------", shift)
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
@@ -84,6 +86,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
         tmp_sequence1 = ("-" * shift) + sequence1
         tmp_sequence2 = sequence2 + ("-" * shift)
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
+        tmp_sequence2 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
         print("-------------------------", shift)
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
@@ -98,6 +101,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
         tmp_sequence2 = ("-" * shift) + sequence2
         tmp_sequence1 = sequence1 + ("-" * shift)
         tmp_sequence2 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
+        tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
         print("-------------------------", shift)
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
