@@ -42,9 +42,26 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
     max_match_count = 0
     best_shift = 0
 
-    for shift in range(1, max_shift + 1):
-        shifted_sequence1 = sequence1[-shift:] + sequence1[:-shift]
-        match_count = calculate_matches(shifted_sequence1, sequence2)
+    for shift in range(0, max_shift + 1):
+        #shifted_sequence1 = sequence1[-shift:] + sequence1[:-shift]
+        shifted_sequence1 = ("-" * shift) + sequence1
+        tmp_sequence2 = sequence2 + ("-" * shift)
+        print("-------------------------", shift)
+        print("SEQ 1:", shifted_sequence1)
+        print("SEQ 2:", tmp_sequence2)
+        match_count = calculate_matches(shifted_sequence1, tmp_sequence2)
+
+        if match_count > max_match_count:
+            max_match_count = match_count
+            best_shift = shift
+    
+    for shift in range(0, max_shift + 1):
+        tmp_sequence2 = ("-" * shift) + sequence2
+        tmp_sequence1 = sequence1 + ("-" * shift)
+        print("-------------------------", shift)
+        print("SEQ 1:", tmp_sequence1)
+        print("SEQ 2:", tmp_sequence2)
+        match_count = calculate_matches(tmp_sequence1, tmp_sequence2)
 
         if match_count > max_match_count:
             max_match_count = match_count
