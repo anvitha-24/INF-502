@@ -22,7 +22,7 @@ def calculate_max_contiguous_chain(sequence1, sequence2):
     current_contiguous_chain = 0
 
     for char1, char2 in zip(sequence1, sequence2):
-        if char1 == char2:
+        if char1 == char2 and char1 != '-':
             current_contiguous_chain += 1
             max_contiguous_chain = max(max_contiguous_chain, current_contiguous_chain)
         else:
