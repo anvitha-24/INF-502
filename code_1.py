@@ -45,7 +45,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
     for shift in range(0, max_shift + 1):
         #shifted_sequence1 = sequence1[-shift:] + sequence1[:-shift]
         tmp_sequence1 = ("-" * shift) + sequence1
-        tmp_sequence2 = sequence2 + ("-" * shift)
+        tmp_sequence2 = sequence2
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
         tmp_sequence1 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
         print("-------------------------", shift)
@@ -60,7 +60,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
     
     for shift in range(0, max_shift + 1):
         tmp_sequence2 = ("-" * shift) + sequence2
-        tmp_sequence1 = sequence1 + ("-" * shift)
+        tmp_sequence1 = sequence1
         tmp_sequence1 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
         print("-------------------------", shift)
@@ -84,7 +84,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
     for shift in range(0, max_shift + 1):
         #shifted_sequence1 = sequence1[-shift:] + sequence1[:-shift]
         tmp_sequence1 = ("-" * shift) + sequence1
-        tmp_sequence2 = sequence2 + ("-" * shift)
+        tmp_sequence2 = sequence2
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
         tmp_sequence2 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
         print("-------------------------", shift)
@@ -99,7 +99,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
     
     for shift in range(0, max_shift + 1):
         tmp_sequence2 = ("-" * shift) + sequence2
-        tmp_sequence1 = sequence1 + ("-" * shift)
+        tmp_sequence1 = sequence1
         tmp_sequence2 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
         print("-------------------------", shift)
