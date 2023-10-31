@@ -50,6 +50,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
         print("SEQ 1:", shifted_sequence1)
         print("SEQ 2:", tmp_sequence2)
         match_count = calculate_matches(shifted_sequence1, tmp_sequence2)
+        print('Match Count:', match_count)
 
         if match_count > max_match_count:
             max_match_count = match_count
@@ -62,6 +63,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
         match_count = calculate_matches(tmp_sequence1, tmp_sequence2)
+        print('Match Count:', match_count)
 
         if match_count > max_match_count:
             max_match_count = match_count
@@ -83,6 +85,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
         print("SEQ 1:", shifted_sequence1)
         print("SEQ 2:", tmp_sequence2)
         match_count = calculate_max_contiguous_chain(shifted_sequence1, tmp_sequence2)
+        print('Match Chain:', match_count)
 
         if match_count > max_contiguous_chain:
             max_contiguous_chain = match_count
@@ -95,6 +98,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
         match_count = calculate_max_contiguous_chain(tmp_sequence1, tmp_sequence2)
+        print('Match Chain:', match_count)
 
         if match_count > max_contiguous_chain:
             max_contiguous_chain = match_count
