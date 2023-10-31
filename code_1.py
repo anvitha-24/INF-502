@@ -48,7 +48,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
         tmp_sequence2 = sequence2
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
         tmp_sequence1 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
-        print("-------------------------", shift)
+        print("-------------------------", shift, "LEFT")
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
         match_count = calculate_matches(tmp_sequence1, tmp_sequence2)
@@ -63,7 +63,7 @@ def calculate_matches_with_shifts(sequence1, sequence2, max_shift):
         tmp_sequence1 = sequence1
         tmp_sequence1 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
-        print("-------------------------", shift)
+        print("-------------------------", shift, "RIGHT")
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
         match_count = calculate_matches(tmp_sequence1, tmp_sequence2)
@@ -87,7 +87,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
         tmp_sequence2 = sequence2
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
         tmp_sequence2 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
-        print("-------------------------", shift)
+        print("-------------------------", shift, "LEFT")
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
         match_count = calculate_max_contiguous_chain(tmp_sequence1, tmp_sequence2)
@@ -102,7 +102,7 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
         tmp_sequence1 = sequence1
         tmp_sequence2 += (len(tmp_sequence2) - len(tmp_sequence1)) * "-"
         tmp_sequence2 += (len(tmp_sequence1) - len(tmp_sequence2)) * "-"
-        print("-------------------------", shift)
+        print("-------------------------", shift, "RIGHT")
         print("SEQ 1:", tmp_sequence1)
         print("SEQ 2:", tmp_sequence2)
         match_count = calculate_max_contiguous_chain(tmp_sequence1, tmp_sequence2)
