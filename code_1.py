@@ -75,12 +75,29 @@ def calculate_max_contiguous_chain_with_shifts(sequence1, sequence2, max_shift):
     max_contiguous_chain = 0
     best_shift = 0
 
-    for shift in range(1, max_shift + 1):
-        shifted_sequence1 = sequence1[-shift:] + sequence1[:-shift]
-        chain_length = calculate_max_contiguous_chain(shifted_sequence1, sequence2)
+    for shift in range(0, max_shift + 1):
+        #shifted_sequence1 = sequence1[-shift:] + sequence1[:-shift]
+        shifted_sequence1 = ("-" * shift) + sequence1
+        tmp_sequence2 = sequence2 + ("-" * shift)
+        print("-------------------------", shift)
+        print("SEQ 1:", shifted_sequence1)
+        print("SEQ 2:", tmp_sequence2)
+        match_count = calculate_max_contiguous_chain(shifted_sequence1, tmp_sequence2)
 
-        if chain_length > max_contiguous_chain:
-            max_contiguous_chain = chain_length
+        if match_count > max_contiguous_chain:
+            max_contiguous_chain = match_count
+            best_shift = shift
+    
+    for shift in range(0, max_shift + 1):
+        tmp_sequence2 = ("-" * shift) + sequence2
+        tmp_sequence1 = sequence1 + ("-" * shift)
+        print("-------------------------", shift)
+        print("SEQ 1:", tmp_sequence1)
+        print("SEQ 2:", tmp_sequence2)
+        match_count = calculate_max_contiguous_chain(tmp_sequence1, tmp_sequence2)
+
+        if match_count > max_contiguous_chain:
+            max_contiguous_chain = match_count
             best_shift = shift
 
     return max_contiguous_chain, best_shift
